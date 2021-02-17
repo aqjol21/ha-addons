@@ -1,6 +1,6 @@
 #!/bin/sh -e
 ADDON_NAME=$1
-GITHUB_URL="https://gitlab.com/connected-home/ha-addons.git"
+GITHUB_URL="https://github.com/aqjol21/ha-addons.git"
 docker run --rm --privileged --network host --name "${ADDON_NAME}" \
         -v /data/ch-gitlab-runner/root:/root \
 	-v "$(pwd)":/docker \

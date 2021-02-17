@@ -15,7 +15,6 @@ shell-check:
 build:
   stage: build
   script:
-    - ./build.sh l2tp-client
     - ./build.sh zigbee2mqtt
   tags:
     - ch-gitlab-runner

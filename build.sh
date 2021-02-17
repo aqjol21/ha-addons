@@ -10,7 +10,7 @@ if git diff HEAD~ --name-only|grep "$ADDON_NAME"; then
                 --all \
                 --no-cache \
                 --from "homeassistant/{arch}-base" \
-                --author "Baurzhan Taishinov <baurzhan@gmail.com>" \
+                --author "aqjole" \
                 --doc-url "${GITHUB_URL}" \
                 --push \
                 --login "${DOCKER_LOGIN}" \

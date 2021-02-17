@@ -1,6 +1,6 @@
 #!/bin/sh -e
 ADDON_NAME=$1
-GITHUB_URL="https://gitlab.com/connected-home/ha-addons.git"
+GITHUB_URL="https://github.com/aqjol21/ha-addons.git"
 if git diff HEAD~ --name-only|grep "$ADDON_NAME"; then
         docker run --rm --privileged --network host --name "${ADDON_NAME}" \
                 -v "$(pwd)":/docker \

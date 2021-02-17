@@ -1,0 +1,21 @@
+image: docker:19.03.8-git
+variables:
+        #DOCKER_HOST: unix:///var/run/docker.sock
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+services:
+  - docker:19.03.8-dind
+stages:
+  - check
+  - build
+shell-check:
+  stage: check
+  script:
+    - ./shell-check.sh
+build:
+  stage: build
+  script:
+    - ./build.sh l2tp-client
+    - ./build.sh zigbee2mqtt
+  tags:
+    - ch-gitlab-runner
